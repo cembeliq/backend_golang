@@ -36,5 +36,6 @@ func groupV1Routes(r *echo.Group) {
 
 	r.POST("/login", controllers.AuthenticateUser)
 	r.GET("/generate-hash/:password", controllers.GenerateHashPassword)
+	r.POST("/register", controllers.Registration)
 
 }

@@ -5,10 +5,10 @@ import (
 )
 
 // HashPassword is generate hash password
-func HashPassword(pwd string) (string, error) {
-	hash, err := bcrypt.GenerateFromPassword([]byte(pwd), bcrypt.DefaultCost)
+func HashPassword(pwd string) string {
+	hash, _ := bcrypt.GenerateFromPassword([]byte(pwd), bcrypt.DefaultCost)
 
-	return string(hash), err
+	return string(hash)
 }
 
 // CompareHashAndPassword is compare password hash and plain password

@@ -8,6 +8,13 @@ import (
 
 func main() {
 	env := config.EnvVariable("ENVIRONMENT")
+	// result, err := models.Find("tst", "tes")
+	// if err != nil {
+	// 	log.Println(err)
+	// }
+	// log.Printf("%+v", result)
+
+	// log.Println(result)
 
 	log.Println("ENVIRONMENT TYPE: " + env)
 	r := routes.Init()
